@@ -20,4 +20,16 @@
 - [X] Zadanie 18
 - [X] Zadanie 19
 
+### [Zestaw 3](Zestaw%203)
+
+- [X] Zadanie 1
+- [X] Zadanie 2
+- [X] Zadanie 3
+- [ ] Zadanie 4
+- [ ] Zadanie 5
+- [ ] Zadanie 6
+- [ ] Zadanie 8
+- [ ] Zadanie 9
+- [ ] Zadanie 10
+
 > Zaktualizowano 26.10.2022
