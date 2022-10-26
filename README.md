@@ -11,13 +11,13 @@
 
 - [X] Zadanie 10
 - [X] Zadanie 11
-- [ ] Zadanie 12
-- [ ] Zadanie 13
-- [ ] Zadanie 14
-- [ ] Zadanie 15
-- [ ] Zadanie 16
-- [ ] Zadanie 17
-- [ ] Zadanie 18
-- [ ] Zadanie 19
+- [X] Zadanie 12
+- [X] Zadanie 13
+- [X] Zadanie 14
+- [X] Zadanie 15
+- [X] Zadanie 16
+- [X] Zadanie 17
+- [X] Zadanie 18
+- [X] Zadanie 19
 
-> Zaktualizowano 23.10.2022
+> Zaktualizowano 26.10.2022
