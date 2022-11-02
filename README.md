@@ -25,11 +25,11 @@
 - [X] Zadanie 1
 - [X] Zadanie 2
 - [X] Zadanie 3
-- [ ] Zadanie 4
-- [ ] Zadanie 5
-- [ ] Zadanie 6
-- [ ] Zadanie 8
-- [ ] Zadanie 9
-- [ ] Zadanie 10
+- [X] Zadanie 4
+- [X] Zadanie 5
+- [X] Zadanie 6
+- [X] Zadanie 8
+- [X] Zadanie 9
+- [X] Zadanie 10
 
-> Zaktualizowano 26.10.2022
+> Zaktualizowano 2.11.2022
