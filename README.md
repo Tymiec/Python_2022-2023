@@ -32,4 +32,13 @@
 - [X] Zadanie 9
 - [X] Zadanie 10
 
-> Zaktualizowano 2.11.2022
+### [Zestaw 4](Zestaw%204)
+
+- [X] Zadanie 2
+- [X] Zadanie 3
+- [X] Zadanie 4
+- [ ] Zadanie 5
+- [X] Zadanie 6
+- [X] Zadanie 7
+
+> Zaktualizowano 8.11.2022
