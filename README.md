@@ -41,4 +41,8 @@
 - [X] Zadanie 6
 - [X] Zadanie 7
 
-> Zaktualizowano 8.11.2022
+### [Zestaw 5](Zestaw%205)
+
+- [ ] Zadanie 3
+
+> Zaktualizowano 15.11.2022
