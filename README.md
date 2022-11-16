@@ -43,6 +43,6 @@
 
 ### [Zestaw 5](Zestaw%205)
 
-- [ ] Zadanie 3
+- [X] Zadanie 2
 
 > Zaktualizowano 15.11.2022
