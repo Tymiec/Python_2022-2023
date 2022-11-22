@@ -5,8 +5,23 @@
 Pixelarty statków, spray wybuchu
 
 Celownik przesuwany za pomocą przytrzymywania lewym przyciskiem myszy, przesuwania boxa z kursorem, brania pozycji środka blocku z celownikiem do wybierania w który statek strzelamy
+```python 
+elif event.type == MOUSEBUTTONUP:
+            moving = False
+            print(f'Position: {event.pos}') # working get postion of movable crosshair
+```
+ewentualnie zrobić tak żeby obraz przesuwał się do kolejnego naciśnięcia lewego przycisku czyli
+```python
+event.type == MOUSEBUTTONDOWN:
 
+```
 
+jeżeli left click 1 raz
+    moving = True
+    jeżeli left click 2 raz
+        moving = False
+
+Chyba skorzystam z prostego trzymania left clicka.
 
 
 ## Paleta kolorów
@@ -40,3 +55,7 @@ Celownik przesuwany za pomocą przytrzymywania lewym przyciskiem myszy, przesuwa
 - ![#003459](https://placehold.co/15x15/003459/003459.png) `#003459`
 - ![#ac7b84](https://placehold.co/15x15/ac7b84/ac7b84.png) `#ac7b84`
 
+## Wymagania
+
+- Python 3.11.0
+- Pygame 2.1.3.dev8
