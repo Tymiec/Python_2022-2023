@@ -45,4 +45,9 @@
 
 - [X] Zadanie 2
 
-> Zaktualizowano 15.11.2022
+### [Zestaw 6](Zestaw%206)
+
+- [X] Zadanie 2
+- [X] Zadanie 3
+
+> Zaktualizowano 23.11.2022
