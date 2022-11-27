@@ -77,7 +77,6 @@ Chyba skorzystam z prostego trzymania left clicka.
 - Opcje
     - Rozmiar ekranu (działa po restarcie?)
     - Paleta kolorów
-    
 - Wyjście
 
 ## Domyślna paleta kolorów
