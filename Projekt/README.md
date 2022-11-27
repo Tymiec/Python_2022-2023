@@ -1,5 +1,44 @@
 # Prowizoryczny koncept projektu zaliczeniowego gry w statki z użyciem biblioteki pygame
 
+## Roadmap + Wygląd menu
+
+```mermaid
+%%{init: {'theme': light 'base', 'themeVariables': { 'primaryColor': '#ffcccc', 'edgeLabelBackground':'#ffffee', 'tertiaryColor': '#fff0f0'}}}%%
+graph 
+Intro[Intro] ---> Menu[Menu]
+Menu[Menu] ---> Opcje[Opcje]
+Opcje[Opcje] ---> Menu[Menu]
+Menu[Menu] ---> Start[Start]
+Start[Start] ---> Gra[Gra]
+Start[Start] ---> Przygotowania[Przygotowania]
+Start[Start] ---> Losowo[Losowo]
+Losowo[Losowo] ---> Gra[Gra]
+Przygotowania[Przygotowania] ---> Gra[Gra]
+Gra[Gra] ---> Podsumowanie[Podsumowanie]
+Podsumowanie[Podsumowanie] ---> Start[Start]
+subgraph Roadmap
+	Intro
+	Menu
+	Opcje
+	Start
+	Losowo
+	Przygotowania
+	Gra
+	Podsumowanie
+	
+
+end
+
+style Intro fill:#32751B
+
+```
+Przygotowania:
+- Poziom trudności  
+- Rozmieszczenie statków
+<!-- Planowane do dodania:
+- Ilość statków
+- Rozmiar planszy  -->
+
 ## Rozgrywka
 
 Pixelarty statków, spray wybuchu
@@ -59,3 +98,7 @@ Chyba skorzystam z prostego trzymania left clicka.
 
 - Python 3.11.0
 - Pygame 2.1.3.dev8
+
+## Disclaimer
+
+> This is a learning project, nothing commercial. If you are an author of any music used here and want it deleted feel free to contact me.

@@ -50,4 +50,7 @@
 - [X] Zadanie 2
 - [X] Zadanie 3
 
+### [Zestaw 7](Zestaw%207)
+
+
 > Zaktualizowano 23.11.2022
