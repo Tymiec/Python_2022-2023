@@ -51,6 +51,7 @@
 - [X] Zadanie 3
 
 ### [Zestaw 7](Zestaw%207)
+- [X] Zadanie 4
+- [X] Zadanie 6
 
-
-> Zaktualizowano 23.11.2022
+> Zaktualizowano 30.11.2022
