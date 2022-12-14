@@ -54,4 +54,10 @@
 - [X] Zadanie 4
 - [X] Zadanie 6
 
-> Zaktualizowano 30.11.2022
+### [Zestaw 9](Zestaw%209)
+- [X] Zadanie 1
+
+### [Zestaw 11](Zestaw%2011)
+- [X] Zadanie 1
+
+> Zaktualizowano 13.12.2022
