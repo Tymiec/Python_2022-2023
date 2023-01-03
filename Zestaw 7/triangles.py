@@ -2,6 +2,7 @@
 # Wykorzystać wyjątek ValueError do obsługi błędów. Napisać kod testujący moduł triangles.
 from points import Point
 import math
+import statistics
 
 class Triangle:
     """Klasa reprezentująca trójkąty na płaszczyźnie."""
@@ -11,15 +12,8 @@ class Triangle:
         self.pt1 = Point(x1, y1)
         self.pt2 = Point(x2, y2)
         self.pt3 = Point(x3, y3)
-        l1 = self.pt1.distance(self.pt2)
-        l2 = self.pt1.distance(self.pt3)
-        l3 = self.pt2.distance(self.pt3)
-        if l1 > l2 + l3:
-            raise ValueError("Not a triangle")
-        elif l2 > l1 + l3:
-            raise ValueError("Not a triangle") 
-        elif l3 > l1 + l2:
-            raise ValueError("Not a triangle")
+        if (y2 - y1) * (x3 - x2) == (y3 - y2) * (x2 - x1):
+                    raise ValueError("The points are collinear")
 
     def __str__(self):         # "[(x1, y1), (x2, y2), (x3, y3)]"
         return (f"[({self.pt1.x}, {self.pt1.y}), ({self.pt2.x}, {self.pt2.y}), ({self.pt3.x}, {self.pt3.y})]")
@@ -37,17 +31,19 @@ class Triangle:
     def __ne__(self, other):        # obsługa tr1 != tr2
         return not self == other
 
-    def center(self):         # zwraca środek trójkąta
-        triangle_x = (self.pt1.x, self.pt2.x, self.pt3.x)/3
-        traingle_y = (self.pt1.y, self.pt2.y, self.pt3.y)/3
-        return Point(triangle_x, traingle_y)
+    def center(self):
+        x_coordinates = (self.pt1.x, self.pt2.x, self.pt3.x)
+        y_coordinates = (self.pt1.y, self.pt2.y, self.pt3.y)
+        x_center = statistics.mean(x_coordinates)
+        y_center = statistics.mean(y_coordinates)
+        return Point(x_center, y_center)
 
-    def area(self):            # pole powierzchni
-        v1 = self.pt1.distance(self.pt2)
-        v2 = self.pt1.distance(self.pt3)
-        v3 = self.pt2.distance(self.pt3)
-        a = sum(v1,v2,v3)/2
-        return math.sqrt(a * (a - v1) * (a - v2) * (a - v3))
+    def area(self):
+        l1 = self.pt1.distance(self.pt2)
+        l2 = self.pt1.distance(self.pt3)
+        l3 = self.pt2.distance(self.pt3)
+        p = (l1 + l2 + l3)/2
+        return math.sqrt(p*(p-l1)*(p-l2)*(p-l3))
 
     def move(self, x, y):      # przesunięcie o (x, y)
         vec = Point(x, y)
@@ -57,18 +53,17 @@ class Triangle:
         return self
 
     def make4(self):           # zwraca krotkę czterech mniejszych
-        v1_v2 = Point((self.pt1.x + self.pt2.x)/2 , (self.pt1.y + self.pt2.y)/2)
-        v2_v3 = Point((self.pt2.x + self.pt3.x)/2 , (self.pt2.y + self.pt3.y)/2)
-        v3_v1 = Point((self.pt3.x + self.pt1.x)/2 , (self.pt3.y + self.pt1.y)/2)
-
-        triangle_1 = Triangle(self.pt1.x , self.pt1.y , v1_v2.x , v1_v2.y , v3_v1.x , v3_v1.y)
-        triangle_2 = Triangle(self.pt2.x , self.pt2.y , v1_v2.x , v1_v2.y , v2_v3.x , v2_v3.y)
-        triangle_3 = Triangle(self.pt3.x , self.pt3.y , v2_v3.x , v2_v3.y , v3_v1.x , v3_v1.y)
-
-        triangle_middle = Triangle(v1_v2.x , v1_v2.y , v2_v3.x , v2_v3.y , v3_v1.x , v3_v1.y)
-        return (triangle_1 , triangle_2  , triangle_3 , triangle_middle)
+        point12 = Point((self.pt1.x + self.pt2.x) / 2, (self.pt1.y + self.pt2.y) / 2)
+        point23 = Point((self.pt2.x + self.pt3.x) / 2, (self.pt2.y + self.pt3.y) / 2)
+        point13 = Point((self.pt1.x + self.pt3.x) / 2, (self.pt1.y + self.pt3.y) / 2)
+        return (Triangle(self.pt1.x, self.pt1.y, point13.x, point13.y, point12.x, point12.y),
+                Triangle(self.pt2.x, self.pt2.y, point23.x, point23.y, point12.x, point12.y),
+                Triangle(self.pt3.x, self.pt3.y, point13.x, point13.y, point23.x, point23.y),
+                Triangle(point23.x, point23.y, point13.x, point13.y, point12.x, point12.y))
 #     A       po podziale    A
 #    / \                    /1\
 #   /   \                  +---+
 #  /     \                /3\ /2\
 # C-------B              C---+---B
+
+

@@ -46,6 +46,9 @@ class Point:
     def __hash__(self):
         return hash((self.x, self.y))   # bazujemy na tuple, immutable points
 
+    def distance(self, other):
+        return math.sqrt((self.x - other.x) ** 2 + (self.y - other.y) ** 2)
+
 # Kod testujący moduł.
 
 import unittest
