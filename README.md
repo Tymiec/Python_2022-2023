@@ -57,7 +57,11 @@
 ### [Zestaw 9](Zestaw%209)
 - [X] Zadanie 1
 
+### [Zestaw 10](Zestaw%210)
+- [X] Zadanie 3
+- [X] Zadanie 8
+
 ### [Zestaw 11](Zestaw%2011)
 - [X] Zadanie 1
 
-> Zaktualizowano 13.12.2022
+> Zaktualizowano 04.01.2023
